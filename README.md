@@ -1,0 +1,2 @@
+# SmartNotesPWA
+SmartNotes React PWA
