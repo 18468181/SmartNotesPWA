@@ -24,7 +24,7 @@ class App extends Component {
 		  Testing Now!!
         </p>
 		<form style={{ textAlign: 'left'}}>
-			<AddVenue name = {this.state.appName} />
+			<AddVenue name = {this} />
 			</form>	
       </div>
     );
