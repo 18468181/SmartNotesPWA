@@ -4,6 +4,13 @@ import './App.css';
 import AddVenue from './AddVenue/AddVenue';
 
 class App extends Component {
+	
+	constructor(props) {
+    super();
+	this.state={
+	  appName : 'Smartnotes '
+	 }
+  }
   render() {
     return (
       <div className="App">
