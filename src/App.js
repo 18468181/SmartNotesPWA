@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import AddVenue from './AddVenue/AddVenue';
 
 class App extends Component {
   render() {
@@ -15,6 +16,9 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
 		  Testing Now!!
         </p>
+		<form style={{ textAlign: 'left'}}>
+			<AddVenue name = {this.state.appName} />
+			</form>	
       </div>
     );
   }
