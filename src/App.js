@@ -21,11 +21,11 @@ class App extends Component {
         <p className="App-intro">
 		  We are still in process of building the app.
           To get started, edit <code>src/App.js</code> and save to reload.
-		  Testing Now!!
+		  <AddVenue/>
         </p>
-		<form style={{ textAlign: 'left'}}>
-			<AddVenue name = {this} />
-			</form>	
+		/* <form style={{ textAlign: 'left'}}>
+			<AddVenue name = {this.state.appName} />
+			</form> */	
       </div>
     );
   }
