@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import AddVenue from './AddVenue/AddVenue';
+import AddVenue from './Login/Login';
 
 class App extends Component {
 	
