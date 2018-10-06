@@ -1,0 +1,18 @@
+.AddVenue {
+  text-align: center;
+}
+
+.AddVenue-header {
+  background-color: #222;
+  height: 80px;
+  padding: 20px;
+  color: lightgreen;
+}
+
+.AddVenue-title {
+  font-size: 1.5em;
+}
+
+.AddVenue-intro {
+  font-size: large;
+}
