@@ -8,7 +8,7 @@ class App extends Component {
 	constructor(props) {
     super();
 	this.state={
-	  appName : 'Smartnotes '
+	  appName : 'Smart Notes '
 	 }
   }
   render() {
@@ -25,7 +25,7 @@ class App extends Component {
         </p>
 		/* <form style={{ textAlign: 'left'}}>
 			<AddVenue name = {this.state.appName} />
-			</form> */	
+		</form> */	
       </div>
     );
   }
