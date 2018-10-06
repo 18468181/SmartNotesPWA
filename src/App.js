@@ -23,10 +23,11 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
 		  <AddVenue/>
         </p>
-		<!––Working
+		<!––
 		<form style={{ textAlign: 'left'}}>
 			<AddVenue name = {this.state.appName} />
-		</form>-->
+		</form>
+		-->
       </div>
     );
   }
