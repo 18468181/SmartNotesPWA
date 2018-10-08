@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import AddVenue from './AddVenue/AddVenue';
-import AddVenue from './Login/Login';
+/* import AddVenue from './AddVenue/AddVenue';
+import Login from './Login/Login'; */
+import ListVenue from './ListVenue/ListVenue';
 
 class App extends Component {
 	
@@ -22,9 +23,8 @@ class App extends Component {
         <p className="App-intro">
 		  We are still in process of building the app.
           To get started, edit <code>src/App.js</code> and save to reload.
-		  <AddVenue/>
+		  <ListVenue/>
         </p>
-		<Login/>
       </div>
     );
   }

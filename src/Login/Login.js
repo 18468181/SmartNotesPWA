@@ -20,6 +20,7 @@ class Login extends Component {
 			<input id="btnClear" type="button" value="Clear" />
 			<ul id="ulMembers"></ul>
 			</body>
+			
 			<form style={{ textAlign: 'left'}}>
 			 <label>
 			 Username  <input type ="text"/>
@@ -41,54 +42,6 @@ class Login extends Component {
 		
 		</div>
     );
-	$(document).ready(function () {
-            var ulMembers = $('#ulMembers');
-
-            $('#btn').click(function () {
-                // Get the username & password from textboxes
-                var username = $('#txtUsername').val();
-                var password = $('#txtPassword').val();
-
-                $.ajax({
-                    type: 'GET',
-                    // Make sure to change the port number to
-                    // where you have the employee service
-                    // running on your local machine
-                    url: '/api/Members',
-                    dataType: 'json',
-                    // Specify the authentication header
-                    // btoa() method encodes a string to Base64
-                    headers: {
-                        'Authorization': 'Basic ' + btoa(username + ':' + password)
-                    },
-                    success: function (data) {
-                        ulMembers.empty();
-                        $.each(data, function (index, val) {
-                            //var fullName = val.MemberName + ' ' + val.LastName;
-                            var adminor;
-                            if (val.MemberAdmin) {
-                                adminor = 'Admin';
-                            }
-                            else {
-                                adminor = 'Not Admin';
-                            }
-                            ulMembers.append('<li>' + val.MemberName + ' (' + adminor + ')</li>');
-                        });
-                    },
-                    complete: function (jqXHR) {
-                        if (jqXHR.status == '401') {
-                            ulMembers.empty();
-                            ulMembers.append('<li style="color:red">'
-                                + jqXHR.status + ' : ' + jqXHR.statusText + '</li>');
-                        }
-                    }
-                });
-            });
-
-            $('#btnClear').click(function () {
-                ulMembers.empty();
-            });
-    });
   }
 }
 export default Login;
