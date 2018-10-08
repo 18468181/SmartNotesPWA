@@ -25,7 +25,7 @@ class ListVenue extends Component {
 	  
 	  //http://smartnotesapi.gear.host/api/venues
 	  
-	   fetch('http://localhost:51080/api/venues')
+	   fetch('http://smartnotesapi.gear.host/api/venues')
 		.then(res => res.json())
 		.then(json => {
 			this.setState({
