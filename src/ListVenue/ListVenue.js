@@ -6,7 +6,7 @@ class ListVenue extends Component {
     super();
 	this.state={
 	  items: [],
-	  //isLoaded: false,
+	  isLoaded: false,
 	  //data: [],
 	  //error: null,
 	 }
@@ -25,7 +25,7 @@ class ListVenue extends Component {
 	  
 	  //http://smartnotesapi.gear.host/api/venues
 	  
-	   fetch('http://smartnotesapi.gear.host/api/venues')
+	   fetch('http://localhost:51080/api/venues')
 		.then(res => res.json())
 		.then(json => {
 			this.setState({
@@ -62,12 +62,12 @@ class ListVenue extends Component {
 	
   render() {
 	  
-	  var { /*isLoaded,*/ items/*, data*/} = this.state;
+	  var { isLoaded, items/*, data*/} = this.state;
 	  
-	  /* if(!isLoaded){
+	   if(!isLoaded){
 		  return <div>Loading...</div>
-	  } */
-	  //else{
+	  } 
+	  else{
 		  return (
 			<div className="ListVenue">
 				Data has been Loaded
@@ -76,13 +76,13 @@ class ListVenue extends Component {
 						<li key={item.VenueID}>
 							Venue: {item.VenueName} | Description: {item.VenueDescription}
 						</li>
-					))};
+					))}
 						
 				</ul>
 			</div>
 			);
 		  
-	  //}
+	  }
   }
 }
 
