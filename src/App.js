@@ -26,10 +26,10 @@ class App extends Component {
 		  
         </p>
 		
-		
+		<ListVenue/>
+		<ListDevice/>
       </div>
-	  <ListVenue/>
-	  <ListDevice/>
+	  
     );
   }
 }
