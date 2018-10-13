@@ -33,6 +33,15 @@ class ListDevice extends Component {
 		  return (
 			<div className="ListDevice">
 				Data has been Loaded
+				<ul>
+					{items.map(item => (
+						<li key={item.DeviceID}>
+							Name: {item.DeviceName} | MAC: {item.DeviceMAC}
+						</li>
+					))}
+						
+				</ul>
+				Data has been Loaded
 				<table>
 					<tr>
 						<th>Device Name</th>
@@ -46,7 +55,7 @@ class ListDevice extends Component {
 					))}
 				</table>
 			</div>
-			);
+			)
 		  
 	  }
   }
